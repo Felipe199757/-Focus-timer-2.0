@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --bg: #ffffff;
+  --bg-card: #e1e1e6;
+  --bg-card-hover: #02799d;
+  --icons-color: #323238;
+  --range: #323238;
+}
+
+.dark {
+  --bg: hsla(240, 5%, 7%, 1);
+  --bg-card: hsla(240, 6%, 17%, 1);
+  --bg-card-hover: #0a3442;
+  --icons-color: white;
+  --range: white;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--range);
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 1.6rem;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.sun-button,
+.moon-button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+
+main {
+  min-width: 38rem;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#timer {
+  display: flex;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+  margin-top: 5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#controls {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 3.5rem;
+}
+
+#controls svg {
+  width: 4.8rem;
+  height: 4.8rem;
+  cursor: pointer;
+  fill: var(--icons-color);
+}
+
+#buttons-wrapper {
+  margin-top: 5rem;
+  display: grid;
+  justify-content: center;
+  grid-template-areas: "A B";
+  gap: 3rem;
+}
+
+#buttons-wrapper .buttons {
+  background-color: var(--bg-card);
+  width: 13.4rem;
+  height: 14.1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 24px;
+}
+
+#buttons-wrapper .fill {
+  background-color: var(--bg-card-hover);
+}
+
+.buttons svg {
+  fill: var(--icons-color);
+}
+
+
+.fill path:nth-child(1) {
+  fill: white;
+}
+
+input[type=range] {
+  appearance: none;
+  width: 9rem;
+  height: 0.4rem;
+  margin-top: 3.2rem;
+  background: var(--icons-color);
+  border-radius: 5px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--icons-color);
+}
+
+.fill input[type=range] {
+
+  appearance: none;
+  width: 9rem;
+  height: 0.4rem;
+  margin-top: 3.2rem;
+  background: white;
+  border-radius: 5px;
+}
+
+.fill input[type=range]::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: white;
+}
+
+@media(min-width: 850px) {
+
+  #timer,
+  #button {
+    margin-top: 0;
+  }
+
+  body {
+    margin: 0 auto;
+  }
+
+  main {
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 19rem;
+    justify-content: center;
+
+  }
+
+}
